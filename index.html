@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Quieres ser mi novia?</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #ffe6f0;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #d63384;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .si {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .no {
+      background-color: #dc3545;
+      color: white;
+      position: absolute;
+    }
+
+    #corazon {
+      font-size: 4em;
+      display: none;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¿Quieres ser mi novia? 🥺</h1>
+
+  <button class="btn si" onclick="mostrarCorazon()">Sí 💘</button>
+  <button class="btn no" id="btnNo" onmouseover="moverBoton()">No ❌</button>
+
+  <div id="corazon">💖TE AMO💖</div>
+
+  <script>
+    function moverBoton() {
+      const boton = document.getElementById("btnNo");
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      boton.style.left = x + "px";
+      boton.style.top = y + "px";
+    }
+
+    function mostrarCorazon() {
+      document.getElementById("corazon").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
